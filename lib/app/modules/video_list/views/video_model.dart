@@ -29,6 +29,7 @@ class VideoModel {
   @JsonKey(name: 'video_cover_url')
   String? videoCoverUrl;
 
+
   /// 视频时长（单位：秒）
   @JsonKey(name: 'video_len')
   int? videoLen;
