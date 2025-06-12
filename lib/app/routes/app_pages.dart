@@ -10,6 +10,8 @@ import '../modules/tabbar_view/bindings/tabbar_view_binding.dart';
 import '../modules/tabbar_view/views/tabbar_view_view.dart';
 import '../modules/video_list/bindings/video_list_binding.dart';
 import '../modules/video_list/views/video_list_view.dart';
+import '../modules/video_player_page/bindings/video_player_page_binding.dart';
+import '../modules/video_player_page/views/video_player_page_view.dart';
 
 part 'app_routes.dart';
 
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.STATUS_LIST,
       page: () => const StatusListView(),
       binding: StatusListBinding(),
+    ),
+    GetPage(
+      name: _Paths.VIDEO_PLAYER_PAGE,
+      page: () => const VideoPlayerPageView(),
+      binding: VideoPlayerPageBinding(),
     ),
   ];
 }

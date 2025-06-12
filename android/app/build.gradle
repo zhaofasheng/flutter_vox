@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.vox_video"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 34
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
