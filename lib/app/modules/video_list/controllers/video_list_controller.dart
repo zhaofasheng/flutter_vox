@@ -4,7 +4,6 @@ import '../views/video_model.dart';
 
 class VideoListController extends GetxController {
 
-  // 响应式视频列表
   final RxList<VideoModel> videoList = <VideoModel>[].obs;
 
   @override

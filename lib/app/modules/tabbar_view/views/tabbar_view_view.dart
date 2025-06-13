@@ -4,10 +4,13 @@ import 'package:vox_video/app/modules/course_list/views/course_list_view.dart';
 import 'package:vox_video/app/modules/home/views/home_view.dart';
 import 'package:vox_video/app/modules/status_list/views/status_list_view.dart';
 import 'package:vox_video/app/modules/video_list/views/video_list_view.dart';
+import '../../video_list/controllers/video_list_controller.dart';
 import '../controllers/tabbar_view_controller.dart';
 
 class TabbarViewView extends GetView<TabbarViewController> {
-  TabbarViewView({super.key});
+  TabbarViewView({super.key}) {
+    Get.put(VideoListController());
+  }
 
   final List<Widget> _pages = [
     const VideoListView(),
@@ -22,7 +25,10 @@ class TabbarViewView extends GetView<TabbarViewController> {
   Widget build(BuildContext context) {
     return Obx(() {
       return Scaffold(
-        body: _pages[controller.selectedIndex.value],
+          body: IndexedStack(
+            index: controller.selectedIndex.value,
+            children: _pages,
+          ),
         bottomNavigationBar: Container(
           color: Colors.white,
           child: SafeArea(
