@@ -11,7 +11,6 @@ class VideoListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<VideoListController>();
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('最新视频'),

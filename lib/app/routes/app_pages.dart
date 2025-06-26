@@ -4,6 +4,12 @@ import '../modules/course_list/bindings/course_list_binding.dart';
 import '../modules/course_list/views/course_list_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/login_view/bindings/login_view_binding.dart';
+import '../modules/login_view/views/login_view_view.dart';
+import '../modules/order_list_view/bindings/order_list_view_binding.dart';
+import '../modules/order_list_view/views/order_list_view_view.dart';
+import '../modules/series_detail_view/bindings/series_detail_view_binding.dart';
+import '../modules/series_detail_view/views/series_detail_view_view.dart';
 import '../modules/status_list/bindings/status_list_binding.dart';
 import '../modules/status_list/views/status_list_view.dart';
 import '../modules/tabbar_view/bindings/tabbar_view_binding.dart';
@@ -50,6 +56,21 @@ class AppPages {
       name: _Paths.VIDEO_PLAYER_PAGE,
       page: () => const VideoPlayerPageView(),
       binding: VideoPlayerPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN_VIEW,
+      page: () => const LoginViewView(),
+      binding: LoginViewBinding(),
+    ),
+    GetPage(
+      name: _Paths.ORDER_LIST_VIEW,
+      page: () => const OrderListViewView(),
+      binding: OrderListViewBinding(),
+    ),
+    GetPage(
+      name: _Paths.SERIES_DETAIL_VIEW,
+      page: () => SeriesDetailViewView(),
+      binding: SeriesDetailViewBinding(),
     ),
   ];
 }

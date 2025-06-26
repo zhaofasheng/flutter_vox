@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_color/flutter_color.dart';
 
 import 'package:get/get.dart';
 
@@ -10,7 +11,11 @@ class StatusListView extends GetView<StatusListController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('StatusListView'),
+        title: const Text('咨询'),
+        backgroundColor: HexColor('#F7F8FC'),
+        elevation: 0,
+        scrolledUnderElevation: 0,
+        surfaceTintColor: Colors.transparent,
         centerTitle: true,
       ),
       body: const Center(

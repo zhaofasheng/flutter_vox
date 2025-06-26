@@ -11,8 +11,10 @@ UserInfoModel _$UserInfoModelFromJson(Map<String, dynamic> json) =>
       ..id = (json['id'] as num?)?.toInt()
       ..nickName = json['nick_name'] as String?
       ..level = (json['level'] as num?)?.toInt()
-      ..frequencyNo = json['frequency_no'] as String?
-      ..avatarUrl = json['avatar_url'] as String?;
+      ..frequencyNo = UserInfoModel._toString(json['frequency_no'])
+      ..avatarUrl = json['avatar_url'] as String?
+      ..userId = UserInfoModel._toString(json['user_id'])
+      ..token = json['token'] as String?;
 
 Map<String, dynamic> _$UserInfoModelToJson(UserInfoModel instance) =>
     <String, dynamic>{
@@ -21,4 +23,6 @@ Map<String, dynamic> _$UserInfoModelToJson(UserInfoModel instance) =>
       'level': instance.level,
       'frequency_no': instance.frequencyNo,
       'avatar_url': instance.avatarUrl,
+      'user_id': instance.userId,
+      'token': instance.token,
     };

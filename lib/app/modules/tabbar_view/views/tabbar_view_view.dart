@@ -4,12 +4,18 @@ import 'package:vox_video/app/modules/course_list/views/course_list_view.dart';
 import 'package:vox_video/app/modules/home/views/home_view.dart';
 import 'package:vox_video/app/modules/status_list/views/status_list_view.dart';
 import 'package:vox_video/app/modules/video_list/views/video_list_view.dart';
+import '../../course_list/controllers/course_list_controller.dart';
+import '../../home/controllers/home_controller.dart';
+import '../../status_list/controllers/status_list_controller.dart';
 import '../../video_list/controllers/video_list_controller.dart';
 import '../controllers/tabbar_view_controller.dart';
 
 class TabbarViewView extends GetView<TabbarViewController> {
   TabbarViewView({super.key}) {
     Get.put(VideoListController());
+    Get.put(CourseListController());
+    Get.put(StatusListController());
+    Get.put(HomeController());
   }
 
   final List<Widget> _pages = [

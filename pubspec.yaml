@@ -19,6 +19,8 @@ dependencies:
   get: ^4.7.2
   json_annotation: ^4.9.0
   video_player: ^2.8.2
+  sp_util: ^2.0.3
+  flutter_color: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -27,9 +29,11 @@ dev_dependencies:
   flutter_lints: ^4.0.0
   build_runner: ^2.4.8
   json_serializable: ^6.7.1
+  flutter_gen_runner: ^5.4.0
 
 flutter:
 
   uses-material-design: true
-
+  assets:
+    - assets/images/
 

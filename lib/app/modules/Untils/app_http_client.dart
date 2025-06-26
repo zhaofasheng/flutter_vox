@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:vox_video/app/modules/Untils/user_storage_service.dart';
 import 'net_logger.dart';
 
 class AppHttpClient {
@@ -7,7 +8,6 @@ class AppHttpClient {
 
   final Dio _dio;
 
-  // 基础地址
   static const String _baseUrl = 'https://sx.byebyetext.com/api/app/';
 
   AppHttpClient._internal()
@@ -27,7 +27,7 @@ class AppHttpClient {
         options.headers['Lang'] = languageType;
 
         final token = _getToken();
-        if (token.isNotEmpty) {
+        if (token != null && token.isNotEmpty) {
           options.headers['Authorization'] = 'Bearer $token';
         }
 
@@ -81,15 +81,14 @@ class AppHttpClient {
 
   /// 模拟获取语言类型（0: 中文, 1: 英文, 2: 日文）
   String _getLanguageType() {
-    const localType = 0; // 你可以换成本地缓存读取
+    const localType = 0;
     if (localType == 1) return 'en';
     if (localType == 2) return 'jp';
     return 'cn';
   }
 
   /// 模拟获取 Token
-  String _getToken() {
-    // 实际使用时替换为用户登录后的 token
-    return ''; // 例如 'abc123'
+  String? _getToken() {
+    return UserStorageService.getToken();
   }
 }
